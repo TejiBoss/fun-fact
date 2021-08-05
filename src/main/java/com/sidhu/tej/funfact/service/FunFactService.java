@@ -12,7 +12,6 @@ public class FunFactService {
 
     public String getFact (String category) {
         int factCount = funFactRepository.getCategoryFactCount(category);
-        // TODO generate random number between 1 and factCOunt
         int seqNbr = (int)(Math.random() * factCount) + 1;
         String fact = funFactRepository.getFact(category, seqNbr);
         return fact;
